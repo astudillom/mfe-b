@@ -3,16 +3,15 @@ import { Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 @Component({
-  selector: 'app-root',
+  selector: 'app-page-one',
   imports: [MatButtonModule, MatIconModule],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  templateUrl: './page-one.html',
+  styleUrl: './page-one.scss'
 })
-export class App {
-  protected title = 'mfe-b';
-  constructor(private readonly router: Router) { }
+export class PageOne {
 
-  goToPageOne() {
-    this.router.navigate(['/mfeb/page-one']);
+  constructor(private readonly router: Router) { }
+  goToPageTwo() {
+    this.router.navigate(['/mfeb/page-two']);
   }
 }
